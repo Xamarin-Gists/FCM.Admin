@@ -1,0 +1,53 @@
+﻿<Window x:Class="FCM.Admin.Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FCM.Admin.Sample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid>
+        <TextBox HorizontalAlignment="Center"
+                 Margin="45,103,45,319" 
+                 TextWrapping="Wrap" 
+                 Background="Salmon"
+                 Text="AIzaSyAvpeKsQGzKUeK3dmo-Y9IBieXsql0QaBs" 
+                 VerticalAlignment="Center" 
+                 Width="402"
+                 TextAlignment="Center"
+                 HorizontalContentAlignment="Center" 
+                 VerticalContentAlignment="Center"
+                 x:Name="ServerKeyBox" 
+                 Height="47"/>
+        <Button Content="Subscribe Single Token" 
+                HorizontalAlignment="Center" 
+                Margin="45,155,45,283" 
+                Background="Green"
+                VerticalAlignment="Center" 
+                Click="SubscribeSingleClickEvent" Width="402" Height="31"/>
+        <Button Content="Unsubscribe Single Token" 
+                HorizontalAlignment="Center" 
+                Margin="45,188,45,250"
+                Background="Red"
+                VerticalAlignment="Center"  
+                Click="UnsubscribeSingleClickEvent" Width="402" Height="31"/>
+        <Button Content="Subscribe Multiple Tokens" 
+                HorizontalAlignment="Center" 
+                Margin="45,221,45,215" 
+                Background="Green"
+                VerticalAlignment="Center" 
+                Click="SubscribeMultipleClickEvent" Width="402" Height="33"/>
+        <Button Content="Unsubscribe Multiple Tokens" 
+                HorizontalAlignment="Center" 
+                Margin="45,256,45,177"
+                Background="Red"
+                VerticalAlignment="Center"  
+                Click="UnsubscribeMultipleClickEvent" Width="402" Height="36"/>
+        <Button Content="Import iOS Tokens" 
+                HorizontalAlignment="Center" 
+                Margin="45,297,45,138"
+                Background="Blue"
+                VerticalAlignment="Center"  
+                Click="ImportiOSTokenClickEvent" Width="402" Height="34"/>
+    </Grid>
+</Window>
