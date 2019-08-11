@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows;
 
 namespace FCM.Admin.Sample
@@ -21,8 +21,7 @@ namespace FCM.Admin.Sample
         #region Click Events
         public void SubscribeSingleClickEvent(object sender, EventArgs eventArgs)
         {
-            admin.SubscribeToTopic("doHfsf52kZk:APA91bHMC__u-VxBjiApy1VibveHz0ubsBT1Z1tqPvUeBhYpwUCgQc0bH3ubbJnJ8VwvDk2cwqNc4IlNmjAPX25Te56X7VyJepLZ2N9gujE1NEy5Py0JIkb8M6rXosR0ZXNkT_YqYK7x",
-                "test");
+            admin.SubscribeToTopic("fcm_device_token", "test");
         }
 
         public void UnsubscribeSingleClickEvent(object sender, EventArgs eventArgs)
@@ -32,17 +31,12 @@ namespace FCM.Admin.Sample
 
         public void SubscribeMultipleClickEvent(object sender, EventArgs eventArgs)
         {
-            admin.SubscribeToTopic(new string[]{"doHfsf52kZk:APA91bHMC__u-VxBjiApy1VibveHz0ubsBT1Z1tqPvUeBhYpwUCgQc0bH3ubbJnJ8VwvDk2cwqNc4IlNmjAPX25Te56X7VyJepLZ2N9gujE1NEy5Py0JIkb8M6rXosR0ZXNkT_YqYK7x",
-            "doHfsf52kZk:APA91bHMC__u-VxBjiApy1VibveHz0ubsBT1Z1tqPvUeBhYpwUCgQc0bH3ubbJnJ8VwvDk2cwqNc4IlNmjAPX25Te56X7VyJepLZ2N9gujE1NEy5Py0JIkb8M6rXosR0ZXNkT_YqYK7x" },
-            "test");
+            admin.SubscribeToTopic(new string[]{"fcm_device_token1", "fcm_device_token2" }, "test");
         }
 
         public void UnsubscribeMultipleClickEvent(object sender, EventArgs eventArgs)
         {
-            admin.UnSubscribeFromTopic(new string[]{"",
-            "doHfsf52kZk:APA91bHMC__1VibveHz0ubsBT1Z1tqPveeeeYpwUCgQc0bH3ubbJnJ8VwvDk2cwqNc4IlNmjAPX25Te56X7VyJepLZ2N9gujE1NEy5Py0JIkb8M6rXosR0ZXNkT_YqYK7x",
-            ""},
-           "test");
+            admin.UnSubscribeFromTopic(new string[]{"fcm_device_token1", "fcm_device_token2"}, "test");
         }
 
         private void ImportiOSTokenClickEvent(object sender, RoutedEventArgs e)
